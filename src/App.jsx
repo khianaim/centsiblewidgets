@@ -114,7 +114,6 @@ function App() {
           maxWidth: 480,
           display: "flex",
           justifyContent: "center",
-<<<<<<< HEAD
           backgroundColor: "#fff"
         }}
       >
@@ -122,11 +121,6 @@ function App() {
         darkMode={darkMode} 
         smallWidget={smallWidget} 
         />
-=======
-        }}
-      >
-        <CentisibleWidget darkMode={darkMode} smallWidget={smallWidget} />
->>>>>>> 6ace5800c46014d1d00eb78a2da1e9ef2f1d5008
       </div>
     </div>
   );
