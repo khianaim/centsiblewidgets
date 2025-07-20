@@ -17,7 +17,11 @@ function App() {
   style={{
     height: "100vh",       // Fix height exactly viewport height
     width: "100vw",
+<<<<<<< HEAD
     backgroundColor: darkMode ? "#121212" : "#fff",
+=======
+    backgroundColor: darkMode ? "#121212" : "#f5f5f5",
+>>>>>>> 6ace5800c46014d1d00eb78a2da1e9ef2f1d5008
     color: darkMode ? "#fff" : "#111",
     display: "flex",
     flexDirection: "column",
@@ -110,6 +114,7 @@ function App() {
           maxWidth: 480,
           display: "flex",
           justifyContent: "center",
+<<<<<<< HEAD
           backgroundColor: "#fff"
         }}
       >
@@ -117,6 +122,11 @@ function App() {
         darkMode={darkMode} 
         smallWidget={smallWidget} 
         />
+=======
+        }}
+      >
+        <CentisibleWidget darkMode={darkMode} smallWidget={smallWidget} />
+>>>>>>> 6ace5800c46014d1d00eb78a2da1e9ef2f1d5008
       </div>
     </div>
   );

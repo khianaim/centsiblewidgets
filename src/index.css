@@ -32,7 +32,11 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-color: #fff; 
+=======
+  background-color: #f9f9f9; 
+>>>>>>> 6ace5800c46014d1d00eb78a2da1e9ef2f1d5008
   color: #111;
   overflow: hidden;
 }
