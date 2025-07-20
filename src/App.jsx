@@ -17,11 +17,7 @@ function App() {
   style={{
     height: "100vh",       // Fix height exactly viewport height
     width: "100vw",
-<<<<<<< HEAD
     backgroundColor: darkMode ? "#121212" : "#fff",
-=======
-    backgroundColor: darkMode ? "#121212" : "#f5f5f5",
->>>>>>> 6ace5800c46014d1d00eb78a2da1e9ef2f1d5008
     color: darkMode ? "#fff" : "#111",
     display: "flex",
     flexDirection: "column",
