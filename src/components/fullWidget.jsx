@@ -12,7 +12,17 @@ export function FullBudgetWidget({ darkMode }) {
   const borderColor = darkMode ? "#333" : "#eee";
   const monthName = new Date().toLocaleString("en-US", { month: "long" });
 
- const getCategoryColor = (category, darkMode) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const widgetWidth = isMobile ? 350 : 450;
+
+  const getCategoryColor = (category, darkMode) => {
   const pastelColors = {
     Groceries: "#B2F2BB", // light green
     Shopping: "#AEDBFF",  // soft blue
@@ -25,7 +35,6 @@ export function FullBudgetWidget({ darkMode }) {
   };
   return darkMode ? darkModeColors[category] : pastelColors[category];
 };
-
 
   useEffect(() => {
     const seeded = [];
@@ -78,30 +87,30 @@ export function FullBudgetWidget({ darkMode }) {
   };
 
   return (
-   <div
-  style={{
-    borderRadius: 24,
-    padding: 24,
-    width: "100%", // full width on small screens
-    maxWidth: 450, // limit width on larger screens
-    height: "auto", // let it grow naturally
-    background: darkMode
-      ? "linear-gradient(to bottom, #0b4246, #8aeb30, rgb(175, 205, 158), #2a2a2a)"
-      : "linear-gradient(to bottom, #0b4246, #8aeb30, #ddffc9, #fafff7)",
-    boxShadow:
-      darkMode
-        ? "0 8px 24px rgba(0,0,0,0.5)"
-        : "0 8px 24px rgba(0,0,0,0.1)",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    transition: "all 0.3s ease",
-    color: darkMode ? "#eee" : "#111",
-    fontWeight: 500,
-    marginTop: "-12px",
-    boxSizing: "border-box",
-  }}
->
+    <div
+        style={{
+          width: widgetWidth,
+          minWidth: widgetWidth,
+          maxWidth: "100%",
+          borderRadius: 24,
+          padding: 24,
+          height: "auto",
+          background: darkMode
+            ? "linear-gradient(to bottom, #0b4246, #8aeb30, rgb(175, 205, 158), #2a2a2a)"
+            : "linear-gradient(to bottom, #0b4246, #8aeb30, #ddffc9, #fafff7)",
+          boxShadow: darkMode
+            ? "0 8px 24px rgba(0,0,0,0.5)"
+            : "0 8px 24px rgba(0,0,0,0.1)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          transition: "all 0.3s ease",
+          color: darkMode ? "#eee" : "#111",
+          fontWeight: 500,
+          marginTop: "-12px",
+          boxSizing: "border-box",
+        }}
+      >
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
         <div

@@ -15,14 +15,14 @@ function App() {
   return (
     <div
   style={{
-    height: "100vh",       // Fix height exactly viewport height
+    height: "100vh",       
     width: "100vw",
     backgroundColor: darkMode ? "#121212" : "#fff",
     color: darkMode ? "#fff" : "#111",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: 24,           // Less padding to save vertical space
+    padding: 24,          
     boxSizing: "border-box",
     fontFamily: "SF Pro, -apple-system, BlinkMacSystemFont, sans-serif",
     transition: "all 0.3s ease",
@@ -110,7 +110,7 @@ function App() {
           maxWidth: 480,
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "#fff"
+          backgroundColor: darkMode ? "#111" : "#fff"
         }}
       >
         <CentisibleWidget 
