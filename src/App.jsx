@@ -110,7 +110,6 @@ function App() {
           maxWidth: 480,
           display: "flex",
           justifyContent: "center",
-          backgroundColor: darkMode ? "#111" : "#fff"
         }}
       >
         <CentisibleWidget 
